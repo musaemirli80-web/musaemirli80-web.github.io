@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Musa Amirli – Senior Product Owner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f8;--surface:#fff;--ink:#14213d;--muted:#55607a;--line:#d5dbe6;--accent:#0e7c86;--accent-ink:#fff;--warn:#b7791f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--surface:#172138;--ink:#eaf0fb;--muted:#9fb0cc;--line:#2a3856;--accent:#3cc1cc;--accent-ink:#0f1626;--warn:#f0b955}}
+:root[data-theme="dark"]{--bg:#0f1626;--surface:#172138;--ink:#eaf0fb;--muted:#9fb0cc;--line:#2a3856;--accent:#3cc1cc;--accent-ink:#0f1626;--warn:#f0b955}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:44px 0 8px}
+h2{font-size:1.5rem;font-weight:700;margin-bottom:18px}
+p{margin:0 0 12px;max-width:68ch}
+/* hero */
+.hero{padding:56px 0 20px}
+.hero h1{font-size:clamp(2.8rem,9vw,5.6rem);font-weight:800;letter-spacing:-.03em}
+.hero .role{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.25rem;font-weight:500;color:var(--muted);margin:10px 0 18px}
+.hero .lede{font-size:1.1rem;max-width:58ch}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+/* roadmap */
+.road{margin-top:34px}
+.track{display:flex;gap:4px;align-items:stretch}
+.seg{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:4px;padding:10px 12px;min-width:0}
+.seg b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1rem}
+.seg span{display:block;font-size:.85rem;color:var(--muted)}
+.seg.s1{flex:2;border-top-color:var(--line)}
+.seg.s2{flex:4;border-top-color:#5b8def}
+.seg.s3{flex:2.4}
+.seg.next{flex:1.5;border:2px dashed var(--warn);border-top-width:2px;background:transparent}
+.seg.next b{color:var(--warn)}
+.road small{display:block;margin-top:8px;color:var(--muted);font-size:.85rem}
+@media (max-width:640px){.track{flex-direction:column}.seg{flex:none!important}}
+/* impact */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid var(--line)}
+.fact{padding:16px 16px 16px 0;border-bottom:1px solid var(--line)}
+.fact dt{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.9rem;font-weight:700;color:var(--accent);line-height:1}
+.fact dd{margin:6px 0 0;color:var(--muted);font-size:.93rem}
+/* how */
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.how h3{font-size:1.1rem;margin-bottom:6px}
+.how p{color:var(--muted);font-size:.95rem}
+/* jobs */
+.job{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px 22px;margin-bottom:16px}
+.job header{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin-bottom:8px}
+.job h3{font-size:1.2rem}
+.job .meta{color:var(--muted);font-size:.9rem}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:6px;max-width:80ch}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.skills h3{font-size:1rem;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:2px 9px;font-size:.88rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.two h3{font-size:1.1rem;margin-bottom:6px}
+.pill{display:inline-block;color:var(--warn);border:1px solid var(--warn);border-radius:99px;padding:0 10px;font-size:.82rem;font-weight:600;margin-left:6px}
+footer{margin-top:44px;padding:30px 0 40px;border-top:1px solid var(--line)}
+footer h2{margin-bottom:8px}
+.case{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:22px;margin-bottom:18px}
+.case h3{font-size:1.3rem;margin-bottom:2px}
+.case .sub{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.case dl{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;margin:0}
+.case dt{font-weight:600}
+.case dd{margin:0}
+.case dd ul{margin:0;padding-left:18px}
+.case dd li{margin-bottom:4px}
+.case .out{display:flex;flex-wrap:wrap;gap:6px 14px;font-weight:600;color:var(--accent)}
+@media (max-width:640px){.case dl{grid-template-columns:1fr;gap:2px}.case dd{margin-bottom:10px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="hero">
+  <h1>Musa Amirli</h1>
+  <p class="role">Senior Product Owner · IT products and platforms · Baku, Azerbaijan</p>
+  <p class="lede">I turn business needs into a prioritized backlog that engineering can build and stakeholders can trust. Six years owning roadmaps, user stories, and releases across banking, holding-company, and technology teams.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:amirli.musa@outlook.com">Email me</a>
+    <a class="btn ghost" href="https://linkedin.com/in/amirlimusa" rel="noopener">View LinkedIn</a>
+  </div>
+  <div class="road" aria-label="Career roadmap">
+    <div class="track">
+      <div class="seg s1"><b>Junior Product Owner</b><span>2019–2021 · Kapital Bank</span></div>
+      <div class="seg s2"><b>Product Owner</b><span>2021–2025 · Azersun Holding</span></div>
+      <div class="seg s3"><b>Senior Product Owner</b><span>2025–now · Proxima Cyber Security</span></div>
+      <div class="seg next"><b>PSPO I</b><span>Scrum.org · in progress</span></div>
+    </div>
+    <small>Career roadmap: segment width follows time in role.</small>
+  </div>
+</div>
+
+<section>
+  <h2>Results from my roles</h2>
+  <dl class="facts">
+    <div class="fact"><dt>15+</dt><dd>products in the portfolio I prioritize today</dd></div>
+    <div class="fact"><dt>90%+</dt><dd>on-time sprint completion across 4+ squads</dd></div>
+    <div class="fact"><dt>~25%</dt><dd>shorter evaluation cycle through standardized scoring</dd></div>
+    <div class="fact"><dt>~20%</dt><dd>fewer post-release defects with stronger UAT</dd></div>
+    <div class="fact"><dt>~40%</dt><dd>less manual data processing by using AI tools</dd></div>
+    <div class="fact"><dt>10+</dt><dd>stakeholders aligned on priorities and timelines</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2>How I work</h2>
+  <div class="how">
+    <div><h3>Start from the outcome</h3><p>Every epic gets a clear value statement and a measurable KPI before it enters the backlog.</p></div>
+    <div><h3>Prioritize in the open</h3><p>I use RICE and MoSCoW so stakeholders can see why one item ranks above another.</p></div>
+    <div><h3>Write stories teams can build</h3><p>User stories with acceptance criteria and a shared Definition of Ready and Done.</p></div>
+    <div><h3>Keep releases predictable</h3><p>I manage scope, dependencies, and risks, and I run UAT before go-live.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <article class="job">
+    <header><h3>Senior Product Owner</h3><span class="meta">2025–Present · Proxima Cyber Security, Baku</span></header>
+    <ul>
+      <li>Own vision, strategy, and roadmap for a 15+ product technology portfolio, prioritizing with RICE and MoSCoW.</li>
+      <li>Refine the backlog with epics, user stories, and acceptance criteria; run planning and reviews with engineers, QA, UX, and architects.</li>
+      <li>Translate stakeholder needs into functional and non-functional specifications, supported by BPMN, UML, and API documentation.</li>
+      <li>Coordinate UAT, release planning, and go-live; track KPIs to measure value delivered.</li>
+      <li>Use AI tools to automate analysis and reporting; mentor 3+ junior product owners and analysts.</li>
+    </ul>
+  </article>
+  <article class="job">
+    <header><h3>Product Owner</h3><span class="meta">2021–2025 · Azersun Holding, Baku</span></header>
+    <ul>
+      <li>Aligned 5+ departments with competing priorities around one shared roadmap for internal digital tools and platforms.</li>
+      <li>Defined functional and security requirements and supported developers through the secure SDLC in Agile/Scrum.</li>
+      <li>Defined and tracked 10+ KPIs for product, process, and control performance.</li>
+      <li>Cut administrative overhead by ~25% with AI-driven analytics for backlog prioritization, reporting, and UAT coordination.</li>
+      <li>Reduced vendor evaluation time by ~25% with standardized scoring.</li>
+    </ul>
+  </article>
+  <article class="job">
+    <header><h3>Junior Product Owner</h3><span class="meta">2019–2021 · Kapital Bank, Baku</span></header>
+    <ul>
+      <li>Owned the backlog for digital banking initiatives across 4+ cross-functional squads.</li>
+      <li>Turned product strategy into scoped tasks with security-aware requirements; reached a 90%+ on-time sprint completion rate.</li>
+      <li>Supported UAT and QA and reduced post-release defects by ~20%.</li>
+    </ul>
+  </article>
+</section>
+
+<section>
+  <h2>Case studies</h2>
+  <article class="case">
+    <h3>Mobile banking</h3>
+    <p class="sub">Kapital Bank · Junior Product Owner · 2019–2021</p>
+    <dl>
+      <dt>Context</dt><dd>Digital banking initiatives with 4+ cross-functional squads working in Agile/Scrum ceremonies.</dd>
+      <dt>Challenge</dt><dd>Stakeholder requests, technical constraints, and business value competed for the same sprint capacity, and defects reached users after release.</dd>
+      <dt>My role</dt><dd>Owned and prioritized the product backlog and translated product strategy into scoped development tasks with security-aware requirements.</dd>
+      <dt>What I did</dt><dd><ul><li>Ranked the backlog by business value against technical effort and agreed priorities with stakeholders.</li><li>Wrote scoped tasks and requirements that supported sprint planning and secure delivery.</li><li>Supported user acceptance testing and QA, and contributed to the software testing life cycle.</li></ul></dd>
+      <dt>Results</dt><dd class="out"><span>90%+ on-time sprint completion</span><span>~20% fewer post-release defects</span></dd>
+    </dl>
+  </article>
+  <article class="case">
+    <h3>Supply chain and logistics digital tools</h3>
+    <p class="sub">Azersun Holding · Product Owner · 2021–2025</p>
+    <dl>
+      <dt>Context</dt><dd>Internal digital tools and platforms supporting supply chain and logistics operations.</dd>
+      <dt>Challenge</dt><dd>5+ departments had competing priorities, and each needed its needs reflected in one roadmap.</dd>
+      <dt>My role</dt><dd>Key liaison between business, engineering, and operations; owner of the shared product roadmap and of functional and security requirements.</dd>
+      <dt>What I did</dt><dd><ul><li>Aligned the departments around a single roadmap and requirement set.</li><li>Defined functional and security requirements and supported developers through the secure SDLC.</li><li>Defined and tracked 10+ KPIs for product, process, and control performance to drive prioritization.</li><li>Evaluated vendor solutions with standardized scoring, together with internal IT.</li><li>Used AI-driven analytics for backlog prioritization, stakeholder reporting, and UAT coordination.</li></ul></dd>
+      <dt>Results</dt><dd class="out"><span>~25% shorter vendor evaluation</span><span>~25% less administrative overhead</span><span>More predictable sprints</span></dd>
+    </dl>
+  </article>
+  <article class="case">
+    <h3>Web and app development products</h3>
+    <p class="sub">Proxima Cyber Security · Senior Product Owner · 2025–Present</p>
+    <dl>
+      <dt>Context</dt><dd>Web and application development products, managed alongside a 15+ product technology portfolio.</dd>
+      <dt>Challenge</dt><dd>Many initiatives competed for the same engineering capacity, so priorities had to be transparent to stakeholders.</dd>
+      <dt>My role</dt><dd>Own vision, roadmap, and backlog; work daily with engineers, QA, UX, and architects.</dd>
+      <dt>What I did</dt><dd><ul><li>Prioritized initiatives with RICE and MoSCoW and shared the reasoning with stakeholders.</li><li>Wrote epics, user stories, and acceptance criteria and agreed Definitions of Ready and Done with the team.</li><li>Turned stakeholder needs into functional and non-functional specifications supported by BPMN, UML, and API documentation.</li><li>Coordinated UAT, release planning, and go-live, and tracked KPIs after release.</li><li>Used AI tools to automate analysis and reporting, and mentored 3+ junior product owners and analysts.</li></ul></dd>
+      <dt>Results</dt><dd class="out"><span>~40% less manual data processing</span><span>10+ stakeholders aligned</span></dd>
+    </dl>
+  </article>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Product and delivery</h3><ul class="tags"><li>Product ownership</li><li>Roadmapping</li><li>Backlog management</li><li>Stakeholder management</li><li>Agile/Scrum</li><li>Kanban</li><li>RICE</li><li>MoSCoW</li><li>UAT</li></ul></div>
+    <div><h3>AI and automation</h3><ul class="tags"><li>Generative AI</li><li>Prompt engineering</li><li>AI-assisted analysis</li><li>Workflow automation</li><li>Predictive backlog prioritization</li></ul></div>
+    <div><h3>Technical and analysis</h3><ul class="tags"><li>Swagger</li><li>Postman</li><li>BPMN</li><li>UML</li><li>UX design</li><li>Jira</li><li>Confluence</li><li>Asana</li><li>Visio</li><li>KPI design</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="two">
+    <div>
+      <h2>Certification</h2>
+      <p><strong>Professional Scrum Product Owner™ I (PSPO I)</strong><span class="pill">in progress</span><br><span style="color:var(--muted)">Scrum.org</span></p>
+      <h2 style="margin-top:22px">Languages</h2>
+      <p>Azerbaijani (native), English (fluent), Turkish (fluent), Russian (elementary), Polish (beginner)</p>
+    </div>
+    <div>
+      <h2>Education</h2>
+      <p><strong>BBA, English-taught</strong><br>Azerbaijan State University of Economics, 2018–2022</p>
+      <p style="color:var(--muted)">Thesis: “Impact of Agile Methodology on Organizational Performance”</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Let’s talk about your product</h2>
+  <p>I’m open to Senior Product Owner roles. The fastest way to reach me is email.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:amirli.musa@outlook.com">amirli.musa@outlook.com</a>
+    <a class="btn ghost" href="https://linkedin.com/in/amirlimusa" rel="noopener">linkedin.com/in/amirlimusa</a>
+  </div>
+</footer>
+</main>
+</body>
+</html>
